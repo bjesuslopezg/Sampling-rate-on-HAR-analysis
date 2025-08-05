@@ -1,0 +1,27 @@
+Dask client initialized
+Subsampling applied: keeping 1 every 5 rows
+Rows before: 11,279,275
+Rows after:  2,255,855
+Retained:    20.00%
+Dataset 'acc_phone' loaded with 10 partitions
+Training classification model: xgboost
+Features extracted for 'acc_phone' with 8797 samples
+/Volumes/APFS_Bry_SSD/opt/anaconda3/envs/TFM/lib/python3.10/site-packages/xgboost/training.py:183: UserWarning: [19:18:51] WARNING: /Users/runner/work/xgboost/xgboost/src/learner.cc:738: 
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+              precision    recall  f1-score   support
+
+        bike       0.88      0.85      0.86       389
+         sit       0.92      0.95      0.94       481
+  stairsdown       0.83      0.80      0.81       393
+    stairsup       0.78      0.81      0.80       392
+       stand       0.90      0.88      0.89       448
+        walk       0.88      0.89      0.88       537
+
+    accuracy                           0.87      2640
+   macro avg       0.86      0.86      0.86      2640
+weighted avg       0.87      0.87      0.87      2640
+
+Model 'xgboost' trained successfully with 6 classes
+Total processing time: 0.33 minutes

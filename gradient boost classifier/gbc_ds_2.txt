@@ -1,0 +1,23 @@
+Dask client initialized
+Subsampling applied: keeping 1 every 2 rows
+Rows before: 11,279,275
+Rows after:  5,639,638
+Retained:    50.00%
+Dataset 'acc_phone' loaded with 10 partitions
+Training classification model: gbc
+Features extracted for 'acc_phone' with 22015 samples
+              precision    recall  f1-score   support
+
+        bike       0.94      0.91      0.93      1047
+         sit       0.98      0.98      0.98      1222
+  stairsdown       0.86      0.87      0.86       922
+    stairsup       0.87      0.88      0.88      1044
+       stand       0.96      0.94      0.95      1081
+        walk       0.92      0.94      0.93      1289
+
+    accuracy                           0.92      6605
+   macro avg       0.92      0.92      0.92      6605
+weighted avg       0.92      0.92      0.92      6605
+
+Model 'gbc' trained successfully with 6 classes
+Total processing time: 0.36 minutes

@@ -1,0 +1,133 @@
+Dask client initialized
+Subsampling applied: keeping 1 every 10 rows
+Rows before: 11,279,275
+Rows after:  1,127,928
+Retained:    10.00%
+Dataset 'acc_phone' loaded with 10 partitions
+Training time-series model: cnn
+✅ Time-series windows extracted: 4390
+/Volumes/APFS_Bry_SSD/opt/anaconda3/envs/TFM/lib/python3.10/site-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
+  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                       ┃ Output Shape              ┃        Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩
+│ conv1d (Conv1D)                    │ (None, 512, 64)           │          1,024 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ max_pooling1d (MaxPooling1D)       │ (None, 256, 64)           │              0 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ conv1d_1 (Conv1D)                  │ (None, 256, 64)           │         20,544 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ max_pooling1d_1 (MaxPooling1D)     │ (None, 128, 64)           │              0 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ flatten (Flatten)                  │ (None, 8192)              │              0 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ dense (Dense)                      │ (None, 128)               │      1,048,704 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ dropout (Dropout)                  │ (None, 128)               │              0 │
+├────────────────────────────────────┼───────────────────────────┼────────────────┤
+│ dense_1 (Dense)                    │ (None, 6)                 │            774 │
+└────────────────────────────────────┴───────────────────────────┴────────────────┘
+ Total params: 1,071,046 (4.09 MB)
+ Trainable params: 1,071,046 (4.09 MB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/40
+22/22 - 1s - 44ms/step - accuracy: 0.3078 - loss: 2.6445 - val_accuracy: 0.4708 - val_loss: 1.4122
+Epoch 2/40
+22/22 - 1s - 27ms/step - accuracy: 0.4246 - loss: 1.3513 - val_accuracy: 0.5714 - val_loss: 1.1335
+Epoch 3/40
+22/22 - 1s - 28ms/step - accuracy: 0.5222 - loss: 1.1329 - val_accuracy: 0.5000 - val_loss: 1.1178
+Epoch 4/40
+22/22 - 1s - 29ms/step - accuracy: 0.5877 - loss: 1.0160 - val_accuracy: 0.6851 - val_loss: 0.8533
+Epoch 5/40
+22/22 - 1s - 28ms/step - accuracy: 0.6571 - loss: 0.8571 - val_accuracy: 0.7305 - val_loss: 0.7737
+Epoch 6/40
+22/22 - 1s - 28ms/step - accuracy: 0.7056 - loss: 0.7542 - val_accuracy: 0.6461 - val_loss: 0.8847
+Epoch 7/40
+22/22 - 1s - 29ms/step - accuracy: 0.7400 - loss: 0.6820 - val_accuracy: 0.7727 - val_loss: 0.6385
+Epoch 8/40
+22/22 - 1s - 29ms/step - accuracy: 0.7743 - loss: 0.6128 - val_accuracy: 0.8084 - val_loss: 0.6145
+Epoch 9/40
+22/22 - 1s - 29ms/step - accuracy: 0.8105 - loss: 0.5258 - val_accuracy: 0.8117 - val_loss: 0.5781
+Epoch 10/40
+22/22 - 1s - 30ms/step - accuracy: 0.8376 - loss: 0.4426 - val_accuracy: 0.7922 - val_loss: 0.6219
+Epoch 11/40
+22/22 - 1s - 29ms/step - accuracy: 0.8662 - loss: 0.3778 - val_accuracy: 0.7922 - val_loss: 0.5938
+Epoch 12/40
+22/22 - 1s - 30ms/step - accuracy: 0.8810 - loss: 0.3501 - val_accuracy: 0.8084 - val_loss: 0.5766
+Epoch 13/40
+22/22 - 1s - 29ms/step - accuracy: 0.8973 - loss: 0.3096 - val_accuracy: 0.8279 - val_loss: 0.5051
+Epoch 14/40
+22/22 - 1s - 29ms/step - accuracy: 0.8984 - loss: 0.2958 - val_accuracy: 0.8214 - val_loss: 0.5986
+Epoch 15/40
+22/22 - 1s - 29ms/step - accuracy: 0.9259 - loss: 0.2351 - val_accuracy: 0.8279 - val_loss: 0.5538
+Epoch 16/40
+22/22 - 1s - 30ms/step - accuracy: 0.9371 - loss: 0.1932 - val_accuracy: 0.8344 - val_loss: 0.6256
+Epoch 17/40
+22/22 - 1s - 30ms/step - accuracy: 0.9512 - loss: 0.1704 - val_accuracy: 0.8084 - val_loss: 0.6494
+Epoch 18/40
+22/22 - 1s - 30ms/step - accuracy: 0.9436 - loss: 0.1719 - val_accuracy: 0.8279 - val_loss: 0.6801
+Epoch 19/40
+22/22 - 1s - 30ms/step - accuracy: 0.9537 - loss: 0.1541 - val_accuracy: 0.8052 - val_loss: 0.6606
+Epoch 20/40
+22/22 - 1s - 30ms/step - accuracy: 0.9656 - loss: 0.1258 - val_accuracy: 0.8182 - val_loss: 0.6949
+Epoch 21/40
+22/22 - 1s - 29ms/step - accuracy: 0.9758 - loss: 0.0974 - val_accuracy: 0.8279 - val_loss: 0.6773
+Epoch 22/40
+22/22 - 1s - 30ms/step - accuracy: 0.9722 - loss: 0.0970 - val_accuracy: 0.8214 - val_loss: 0.6441
+Epoch 23/40
+22/22 - 1s - 38ms/step - accuracy: 0.9761 - loss: 0.0924 - val_accuracy: 0.8117 - val_loss: 0.7003
+Epoch 24/40
+22/22 - 1s - 31ms/step - accuracy: 0.9761 - loss: 0.0849 - val_accuracy: 0.8344 - val_loss: 0.6651
+Epoch 25/40
+22/22 - 1s - 30ms/step - accuracy: 0.9816 - loss: 0.0706 - val_accuracy: 0.8312 - val_loss: 0.7052
+Epoch 26/40
+22/22 - 1s - 30ms/step - accuracy: 0.9783 - loss: 0.0666 - val_accuracy: 0.8344 - val_loss: 0.6711
+Epoch 27/40
+22/22 - 1s - 29ms/step - accuracy: 0.9808 - loss: 0.0696 - val_accuracy: 0.8214 - val_loss: 0.7748
+Epoch 28/40
+22/22 - 1s - 29ms/step - accuracy: 0.9892 - loss: 0.0489 - val_accuracy: 0.8019 - val_loss: 0.8126
+Epoch 29/40
+22/22 - 1s - 29ms/step - accuracy: 0.9913 - loss: 0.0436 - val_accuracy: 0.8149 - val_loss: 0.8765
+Epoch 30/40
+22/22 - 1s - 29ms/step - accuracy: 0.9873 - loss: 0.0465 - val_accuracy: 0.8344 - val_loss: 0.8326
+Epoch 31/40
+22/22 - 1s - 30ms/step - accuracy: 0.9931 - loss: 0.0386 - val_accuracy: 0.8052 - val_loss: 0.8128
+Epoch 32/40
+22/22 - 1s - 29ms/step - accuracy: 0.9913 - loss: 0.0352 - val_accuracy: 0.8279 - val_loss: 0.7829
+Epoch 33/40
+22/22 - 1s - 29ms/step - accuracy: 0.9939 - loss: 0.0269 - val_accuracy: 0.8149 - val_loss: 0.7843
+Epoch 34/40
+22/22 - 1s - 29ms/step - accuracy: 0.9906 - loss: 0.0376 - val_accuracy: 0.8084 - val_loss: 0.9442
+Epoch 35/40
+22/22 - 1s - 28ms/step - accuracy: 0.9931 - loss: 0.0304 - val_accuracy: 0.7987 - val_loss: 0.8871
+Epoch 36/40
+22/22 - 1s - 28ms/step - accuracy: 0.9888 - loss: 0.0345 - val_accuracy: 0.7857 - val_loss: 1.0512
+Epoch 37/40
+22/22 - 1s - 29ms/step - accuracy: 0.9920 - loss: 0.0329 - val_accuracy: 0.8247 - val_loss: 0.9481
+Epoch 38/40
+22/22 - 1s - 29ms/step - accuracy: 0.9935 - loss: 0.0305 - val_accuracy: 0.8019 - val_loss: 0.9187
+Epoch 39/40
+22/22 - 1s - 29ms/step - accuracy: 0.9946 - loss: 0.0271 - val_accuracy: 0.8474 - val_loss: 0.8442
+Epoch 40/40
+22/22 - 1s - 30ms/step - accuracy: 0.9942 - loss: 0.0259 - val_accuracy: 0.7857 - val_loss: 1.0851
+
+Test accuracy: 0.8116932511329651
+[1m 1/42[0m [37m━━━━━━━━━━━━━━━━━━━━[0m [1m1s[0m 25ms/step[1m18/42[0m [32m━━━━━━━━[0m[37m━━━━━━━━━━━━[0m [1m0s[0m 3ms/step [1m36/42[0m [32m━━━━━━━━━━━━━━━━━[0m[37m━━━[0m [1m0s[0m 3ms/step[1m42/42[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 3ms/step
+
+Classification report:
+
+              precision    recall  f1-score   support
+
+        bike       0.87      0.75      0.81       179
+         sit       0.93      0.91      0.92       267
+  stairsdown       0.81      0.74      0.78       188
+    stairsup       0.69      0.61      0.65       206
+       stand       0.93      0.84      0.88       231
+        walk       0.68      0.94      0.79       246
+
+    accuracy                           0.81      1317
+   macro avg       0.82      0.80      0.80      1317
+weighted avg       0.82      0.81      0.81      1317
+
+Total processing time: 0.77 minutes

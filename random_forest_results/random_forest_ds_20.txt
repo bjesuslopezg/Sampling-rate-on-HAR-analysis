@@ -1,0 +1,23 @@
+Dask client initialized
+Subsampling applied: keeping 1 every 20 rows
+Rows before: 11,279,275
+Rows after:  563,964
+Retained:    5.00%
+Dataset 'acc_phone' loaded with 10 partitions
+Training classification model: random_forest
+Features extracted for 'acc_phone' with 2190 samples
+              precision    recall  f1-score   support
+
+        bike       0.86      0.80      0.83        98
+         sit       0.90      0.90      0.90       124
+  stairsdown       0.60      0.52      0.56        85
+    stairsup       0.64      0.73      0.68       102
+       stand       0.91      0.88      0.89       110
+        walk       0.87      0.93      0.90       138
+
+    accuracy                           0.81       657
+   macro avg       0.80      0.79      0.79       657
+weighted avg       0.81      0.81      0.81       657
+
+Model 'random_forest' trained successfully with 6 classes
+Total processing time: 0.31 minutes

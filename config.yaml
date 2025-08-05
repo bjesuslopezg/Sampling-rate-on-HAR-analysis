@@ -1,0 +1,22 @@
+# config.yaml
+dataset:
+  base_path: "/Users/bryanlopez/Developer/Universidad Europea/TFM/heterogeneity+activity+recognition"
+  sensor: "acc_phone"             # Options: acc_phone, gyro_phone, acc_watch, gyro_watch
+  partition_size: "256M"
+  downsample_stride: 0
+
+training:
+  model: "gbc"
+  epochs: 40
+  batch_size: 128
+  validation_split: 0.1
+  random_seed: 42
+
+features:
+  window_size: 512
+  step_size: 256
+
+output:
+  file_name: "gb_test"
+
+  
